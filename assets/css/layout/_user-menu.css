@@ -74,6 +74,12 @@
 }
 
 
+
+.user-menu.active .show-hover,
+.user-menu.active .user-profile__title{
+    display: block;
+}
+
 @media screen and (max-width: 1024px){
     .user-menu .user-profile__title{
         display: none;
