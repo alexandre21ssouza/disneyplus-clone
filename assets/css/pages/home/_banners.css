@@ -1,7 +1,8 @@
 .banners{
     align-items: center;
-     display: flex;
+    display: flex;
     padding-top: 9.7rem;
+    position: relative;
     overflow: hidden;
 }
 
@@ -10,12 +11,15 @@
     align-items: center;
     position: relative;
     display: flex;
+    left: -2rem;
 }
 
 .banner-slider__item{
     flex-shrink: 0;
-    margin:0 1rem 3rem;
-    width: 90vw;
+    margin:0 .9rem 3rem 0.1rem;
+    position: relative;
+    width: 91vw;
+  
 
 }
 
@@ -51,21 +55,34 @@
 
 
 .banner-slider__title{
+    animation: slideLeft 2s;
     left: 0;
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;
 }
 
+.banner-slider__title.active{
+    display:block;
+}
+
+
+.banners .arrow-slider{
+    margin-top: -3rem;
+    position: absolute;
+    z-index: 2;
+}
+
 
 .banners .arrow-slider--left{
-    left: 1.9rem;
+    left: 1rem;
     position: absolute;
     z-index: 2;
 }
 
 .banners .arrow-slider--right{
-    right: 1.9rem;
+    right: 1rem;
     position: absolute;
     z-index: 2;
 }
@@ -74,4 +91,35 @@
 .banners .controls-slider{
     bottom: 4.6rem;
     right: 9.6rem;
+}
+
+@media screen and (max-width: 1024px){
+    .banners{
+        padding-top: 8.2rem;
+       
+    }
+   
+
+
+        .banner-slider__item{
+        width: 85vw;
+        
+    }
+    
+    
+        .banners .arrow-slider--left{
+            left: 1rem;
+            opacity: 50%;
+        }
+
+        .banners .arrow-slider--right{
+            right: 1rem;
+            opacity: 50%;
+        }
+
+        .banners .controls-slider{
+            bottom: 4.2rem;
+            right: 50%;
+            transform: translateX(50%);
+        }
 }
