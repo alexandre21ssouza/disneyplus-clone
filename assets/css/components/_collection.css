@@ -22,6 +22,7 @@
 
 .movie-carousel__list{
     display: flex;
+    margin-left: -3.6rem;
    
 }
 
@@ -70,18 +71,38 @@ display: block;
 
 .movie-carousel .arrow-slider--left{
     left: 1rem;
-    position: absolute;
-    z-index: 2;
+  
 }
 
 .movie-carousel .arrow-slider--right{
     right: 1rem;
-    position: absolute;
-    z-index: 2;
+   
 }
 
 
-.movie-carousel .controls-slider{
-    bottom: 4.6rem;
-    right: 9.6rem;
+
+@media screen and (max-width: 1024px){
+    .collection{
+        overflow: hidden;
+    }
+
+    .collection__title{
+        width: 85vw;
+    }
+
+    .movie-carousel__item{
+        width: calc(85vw / 2);
+    }
+
+    
+    .movie-carousel .arrow-slider--left{
+        left: 0rem;
+        opacity: 75%;
+      
+    }
+    
+    .movie-carousel .arrow-slider--right{
+        right: 0rem;
+        opacity: 75%;
+    }
 }
