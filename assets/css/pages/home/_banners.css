@@ -16,11 +16,15 @@
 
 .banner-slider__item{
     flex-shrink: 0;
+    opacity: .5;
     margin:0 .9rem 3rem 0.1rem;
     position: relative;
     width: 91vw;
   
+}
 
+.banner-slider__item.active{
+    opacity: 1;
 }
 
 
@@ -68,22 +72,28 @@
 
 
 .banners .arrow-slider{
+    height: 100%;
     margin-top: -3rem;
+    opacity: 0;
     position: absolute;
+    transition: opacity .3s;
     z-index: 2;
 }
 
 
+.banners .arrow-slider:hover{
+    opacity: 1;
+}
+
 .banners .arrow-slider--left{
+    padding: 0 1.6rem;
     left: 1rem;
-    position: absolute;
-    z-index: 2;
+   
 }
 
 .banners .arrow-slider--right{
+    padding: 0 1.6rem;
     right: 1rem;
-    position: absolute;
-    z-index: 2;
 }
 
 
@@ -107,13 +117,13 @@
     
     
         .banners .arrow-slider--left{
+            padding: 0 1.6rem;
             left: 1rem;
-            opacity: 50%;
         }
 
         .banners .arrow-slider--right{
+            padding: 0 1.6rem;
             right: 1rem;
-            opacity: 50%;
         }
 
         .banners .controls-slider{

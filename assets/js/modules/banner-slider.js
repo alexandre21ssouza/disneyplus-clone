@@ -1,3 +1,5 @@
+const bannerSliderModule = () =>{
+
 const sliderItems = document.querySelectorAll('[data-banner="item"]')
 const slider = document.querySelector('[data-banner="slider"]')
 const btnNext = document.querySelector('[data-banner="btn-next"]')
@@ -187,11 +189,9 @@ function setListeners() {
         setListeners()
     }
 
-    // return {
-    //     init
-    // }
-
-
-export default {
-    init
+    return {
+        init
+    }
 }
+
+export default bannerSliderModule
